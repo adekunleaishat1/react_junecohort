@@ -6,7 +6,7 @@ import Product from './Product.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <App /> */}
-    <Product/>
+    <App />
+    {/* <Product/> */}
   </StrictMode>,
 )
