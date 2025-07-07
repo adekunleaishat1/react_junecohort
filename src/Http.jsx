@@ -1,14 +1,15 @@
 import React,{useState, useEffect} from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
-const Http = () => {
-  const [allproducts, setproducts] = useState([])
+const Http = ({products}) => {
+  // const [allproducts, setproducts] = useState([])
   const [count, setcount] = useState(0)
   const [calculation, setcalculation] = useState(1)
 
   
   useEffect(() => {
-      GetProduct()
+      // GetProduct()
      setcalculation(count * 2)
   }, [count])
 
@@ -17,16 +18,16 @@ const Http = () => {
   // .then((res) => res.json())
   // .then((data)=> console.log(data))
 
-    const GetProduct = async() =>{
-      try {
-        const response = await axios.get("https://dummyjson.com/products")
-        console.log(response.data.products);
-        setproducts(response.data.products)
-      } catch (error) {
-        console.log(error);
+    // const GetProduct = async() =>{
+    //   try {
+    //     const response = await axios.get("https://dummyjson.com/products")
+    //     console.log(response.data.products);
+    //     setproducts(response.data.products)
+    //   } catch (error) {
+    //     console.log(error);
         
-      }
-    }
+    //   }
+    // }
    
 
   return (
@@ -34,13 +35,15 @@ const Http = () => {
       <h1>{count}</h1>
       <p>{calculation}</p>
       <button onClick={()=>setcount(count + 1)}>add</button>
-      {allproducts.map((product)=>{
+      {products.map((product)=>{
         return(
           <>
+          <Link to={`/one/${product.id}`} key={product.id}>
           <div>
              <img src={product.thumbnail} alt="" />
              <h1>{product.title}</h1>
           </div>
+          </Link>
           </>
         )
       })
