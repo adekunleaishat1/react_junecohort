@@ -1,4 +1,14 @@
 {
-    "user":[],
-    "product":[]
+  "user": [],
+  "product": [
+    {
+      "id": "9020",
+      "name": "Bag",
+      "description": "A nice looking bag",
+      "price": "30000",
+      "stock": "8",
+      "category": "clothe",
+      "image": "https://res.cloudinary.com/daniyfc28/image/upload/v1752061378/l5ormhhus2pe6cja4ykm.jpg"
+    }
+  ]
 }

@@ -9,6 +9,7 @@ import Profile from "./Profile"
 import Product from "./Product"
 import Http from "./Http"
 import OneProduct from "./OneProduct"
+import ProductUpload from "./ProductUpload"
 
 function App() {
    const location = useLocation()
@@ -39,6 +40,7 @@ function App() {
         <Route  path="/" element={<Sportify/>}/>
         <Route  path="*" element={<Notfound/>}/>
         <Route  path="/http" element={<Http products={products}/>}/>
+        <Route  path="/upload" element={<ProductUpload/>}/>
         <Route  path="/one/:id" element={<OneProduct products={products}/>}/>
         <Route  path="/home" element={<Landing/>}> 
              <Route index element={<Product/>}/>
