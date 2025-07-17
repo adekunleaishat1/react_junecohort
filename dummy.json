@@ -1,5 +1,30 @@
 {
-  "user": [],
+  "user": [
+    {
+      "id": "7454",
+      "username": "yeesha",
+      "email": "aishat@gmail.com",
+      "password": "Yeesha1@"
+    },
+    {
+      "id": "d0c2",
+      "username": "yeesha",
+      "email": "aishat@gmail.com",
+      "password": "Yeesha1@"
+    },
+    {
+      "id": "0bda",
+      "username": "yeesha",
+      "email": "aishat@gmail.com",
+      "password": "Yeesha1@"
+    },
+    {
+      "id": "01c1",
+      "username": "yeesha",
+      "email": "aishat@gmail.com",
+      "password": "Yeesha1@"
+    }
+  ],
   "product": [
     {
       "id": "9020",

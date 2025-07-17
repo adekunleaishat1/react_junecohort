@@ -10,6 +10,8 @@ import Product from "./Product"
 import Http from "./Http"
 import OneProduct from "./OneProduct"
 import ProductUpload from "./ProductUpload"
+import Formik from "./Formik"
+import { ToastContainer } from "react-toastify"
 
 function App() {
    const location = useLocation()
@@ -40,6 +42,7 @@ function App() {
         <Route  path="/" element={<Sportify/>}/>
         <Route  path="*" element={<Notfound/>}/>
         <Route  path="/http" element={<Http products={products}/>}/>
+        <Route  path="/form" element={<Formik/>}/>
         <Route  path="/upload" element={<ProductUpload/>}/>
         <Route  path="/one/:id" element={<OneProduct products={products}/>}/>
         <Route  path="/home" element={<Landing/>}> 
@@ -48,6 +51,7 @@ function App() {
             <Route path="/home/product" element={<Product/>}/>
         </Route>
       </Routes>
+        <ToastContainer/>
     </div>
   )
 }
