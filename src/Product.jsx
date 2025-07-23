@@ -1,4 +1,8 @@
-import { useState } from "react"
+import { useState , useEffect} from "react"
+import axios from "axios"
+import { FetchingSuccessful, FetchingUser } from "./redux/UserSlice"
+import { useDispatch , useSelector} from "react-redux"
+import Preloader from "./props/Preloader"
 
 const Product = () =>{
     // let name = "blessing"
@@ -8,6 +12,25 @@ const Product = () =>{
      const [description, setdescription] = useState("")
      const [allProduct, setallProduct] = useState([])
      const [currentindex, setcurrentindex] = useState(null)
+     const dispatch = useDispatch()
+     const {isloading, alluser, error} = useSelector((state)=> state.userslice)
+      console.log(isloading);
+      console.log(alluser);
+      console.log(error);
+      
+     useEffect(() => {
+        dispatch(FetchingUser())
+       axios.get("http://localhost:4568/product")
+       .then((res)=>{
+        dispatch(FetchingSuccessful(res.data))
+        console.log(res);
+        
+       }).catch((err)=>{
+        console.log(err);
+        
+       })
+     }, [])
+     
 
      const changevalue = () =>{ 
         setname("titilayo")
@@ -76,7 +99,7 @@ const Product = () =>{
            </>
         })} */}
 
-       {allProduct.map((e, index)=>(
+       {/* {allProduct.map((e, index)=>(
              <>
              <h1>{e.productname}</h1>
              <h1>{e.productprice}</h1>
@@ -84,8 +107,15 @@ const Product = () =>{
              <button onClick={()=> deleteProduct(index)}>Delete</button>
              <button data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=> editproduct(index)}>Edit</button>
              </>
-       ))}
-
+       ))} */}
+    {isloading && <Preloader/> }
+    {alluser && alluser.map((el)=>(
+      <>
+      <h1>{el.name}</h1>
+      <h1>{el.description}</h1>
+      </>
+    ))}
+    {error && error}
 
 
 

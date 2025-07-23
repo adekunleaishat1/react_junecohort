@@ -1,0 +1,103 @@
+/* DashboardLoader.css */
+.dashboard-loader {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+}
+
+.loader-header-skeleton {
+    height: 60px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loader-content {
+    display: flex;
+    gap: 24px;
+}
+
+.loader-menu-skeleton {
+    width: 200px;
+    height: 500px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loader-main {
+    flex: 1;
+}
+
+.loader-welcome-skeleton {
+    height: 40px;
+    width: 200px;
+    background: #f3f4f6;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loader-section {
+    margin-bottom: 32px;
+}
+
+.loader-title-skeleton {
+    height: 24px;
+    width: 150px;
+    background: #f3f4f6;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loader-item-skeleton {
+    height: 18px;
+    background: #f3f4f6;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loader-item-skeleton:nth-child(2) {
+    width: 80%;
+}
+
+.loader-item-skeleton:nth-child(3) {
+    width: 60%;
+}
+
+.loader-text-skeleton {
+    height: 60px;
+    background: #f3f4f6;
+    border-radius: 6px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loader-stats {
+    display: flex;
+    gap: 16px;
+}
+
+.loader-stat-skeleton {
+    height: 40px;
+    flex: 1;
+    background: #f3f4f6;
+    border-radius: 6px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}

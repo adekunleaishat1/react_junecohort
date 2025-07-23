@@ -12,6 +12,8 @@ import OneProduct from "./OneProduct"
 import ProductUpload from "./ProductUpload"
 import Formik from "./Formik"
 import { ToastContainer } from "react-toastify"
+import Counter from "./Counter"
+
 
 function App() {
    const location = useLocation()
@@ -44,6 +46,7 @@ function App() {
         <Route  path="/http" element={<Http products={products}/>}/>
         <Route  path="/form" element={<Formik/>}/>
         <Route  path="/upload" element={<ProductUpload/>}/>
+        <Route  path="/count" element={<Counter/>}/>
         <Route  path="/one/:id" element={<OneProduct products={products}/>}/>
         <Route  path="/home" element={<Landing/>}> 
              <Route index element={<Product/>}/>
